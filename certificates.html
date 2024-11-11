@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates | Kaan Arda Uzun</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <!-- Burger Menu Icon -->
+ <div class="burger-icon" onclick="toggleMenu()">☰</div>
+
+ <!-- Side Navigation Menu -->
+ <nav class="side-menu">
+     <div class="close-icon" onclick="toggleMenu()">×</div> <!-- Close Icon -->
+     <ul>
+         <li><a href="index.html">About Me</a></li>
+         <li><a href="portfolio.html">Portfolio</a></li>
+         <li><a href="blog.html">Blog</a></li>
+         <li><a href="certificates.html">Certificates</a></li>
+         <li><a href="contact.html">Contact</a></li>
+     </ul>        
+ </nav>
+
+    <header>
+        <h1>Certificates</h1>
+        <p>Here are some of the certifications I've achieved:</p>
+    </header>
+
+    <section id="certificates">
+        <div class="certificates-grid">
+            <!-- Certificate 1 -->
+            <div class="certificate-item">
+                <img src="images/CyberOpsAssoc.png" alt="CyberOps Associate Certificate" class="certificate-img">
+                <p><strong>CyberOps Associate</strong> - Cisco Networking Academy</p>
+                <p>Issued: Jan 2024</p>
+            </div>
+
+            <div class="certificate-item">
+                <img src="images/I2CS__1_.png" alt="Introduction to Cybersecurity" class="certificate-img">
+                <p><strong>Introduction to Cybersecurity</strong> - Cisco Networking Academy</p>
+                <p>Issued: Dec 2023</p>
+            </div>
+            
+            <!-- Certificate 2 -->
+            <div class="certificate-item">
+                <img src="images/turkcell.png" alt="Turkcell Cybersecurity Certificate" class="certificate-img">
+                <p><strong>Siber Güvenliğe Giriş</strong> - Turkcell Akademi</p>
+                <p>Issued: Jan 2024</p>
+            </div>
+
+            <!-- Certificate 3 with PDF preview -->
+            <div class="certificate-item">
+                <img src="images/Garanti Sertifika 201 Kaan Uzun.png" alt="Turkcell Cybersecurity Certificate" class="certificate-img">
+                <p><strong>Cyber Security Bootcamp</strong> - Garanti BBVA Güvenlik Akademisi</p>
+                </iframe>
+                <p>Issued: Dec 2023</p>
+            </div>
+
+            <div class="certificate-item">
+                <img src="images/swift.png" alt="iOS Innovative Development" class="certificate-img">
+                <p><strong>iOS Innovative Development</strong> - TechCareer.net - Kasım Adalan</p>
+                </iframe>
+                <p>Issued: Jul 2024</p>
+            </div>
+
+            <!-- Add more certificates as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kaan Arda Uzun</p>
+    </footer>
+
+    <script>
+        // Function to Toggle Side Menu
+        function toggleMenu() {
+            document.querySelector(".side-menu").classList.toggle("active");
+        }
+
+        // Function to Add Active Class to Clicked Link
+        function activateLink(element) {
+            // Remove active class from all links
+            document.querySelectorAll(".side-menu ul li a").forEach(link => {
+                link.classList.remove("active");
+            });
+            // Add active class to clicked link
+            element.classList.add("active");
+            // Close the menu
+            toggleMenu();
+        }
+    </script>
+    
+</body>
+</html>

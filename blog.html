@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Kaan Arda Uzun</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Burger Menu Icon -->
+    <div class="burger-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Side Navigation Menu -->
+    <nav class="side-menu">
+        <div class="close-icon" onclick="toggleMenu()">×</div> 
+        <!-- Close Icon -->
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>        
+    </nav>
+        
+    <header>
+        <h1>Blog | Kaan Arda Uzun</h1>
+    </header>
+
+    <section id="blog">
+        <h2>Latest Posts</h2>
+
+        <!-- Blog Post 1 -->
+        <article>
+            <h3><a href="https://medium.com/@27uzunkaan/elastic-siem-lab-olu%C5%9Fturma-rehberi-e0cb2c7c9a9d" target="_blank">
+                Understanding SIEM: A Guide to Building Your Own Lab</a></h3>
+            <p>
+                Explore how to set up a SIEM lab to enhance your cybersecurity skills, 
+                with step-by-step instructions and insights into real-world applications.
+            </p>
+        <!-- PDF Preview -->
+        <iframe src="files/siem.pdf" width="100%" height="600px" style="border: none;">
+             Your browser does not support PDFs. <a href="files/siem_guide.pdf">Download the PDF</a> instead.
+        </iframe>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article>
+            <h3><a href="https://medium.com/@27uzunkaan/swift-vs-java-a-showdown-for-ios-development-a068eaf03c67" target="_blank">
+                Swift vs. Java: A Showdown for iOS Development</a></h3>
+            <p>Here’s a comprehensive breakdown of their strengths and weaknesses, 
+                especially in the context of iOS development, to help you make an informed 
+                decision.</p>
+        </article>
+
+        <!-- More blog posts can be added here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kaan Arda Uzun</p>
+    </footer>
+
+    <script>
+        // Function to Toggle Side Menu
+        function toggleMenu() {
+            document.querySelector(".side-menu").classList.toggle("active");
+        }
+
+        // Function to Add Active Class to Clicked Link
+        function activateLink(element) {
+            // Remove active class from all links
+            document.querySelectorAll(".side-menu ul li a").forEach(link => {
+                link.classList.remove("active");
+            });
+            // Add active class to clicked link
+            element.classList.add("active");
+            // Close the menu
+            toggleMenu();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaan Arda Uzun | Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Burger Menu Icon -->
+    <div class="burger-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Side Navigation Menu -->
+    <nav class="side-menu">
+        <div class="close-icon" onclick="toggleMenu()">×</div> <!-- Close Icon -->
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>        
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Kaan Arda Uzun's Website</h1>
+        <p>Your hub for cybersecurity, iOS development, and personal projects.</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hi! My Name is Kaan, a computer engineer with a passion for Cybersecurity and also has a 
+            little interest in iOS development. Here, you will find information about my projects, 
+            blog posts, and my professional journey.
+        </p>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2>Blog</h2>
+        <p>Read my latest thoughts on cybersecurity, iOS development, and more.</p>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <p>Certificates I own.</p>
+     </section>
+
+    <!-- CV Section -->
+    <section id="cv">
+        <h2>Curriculum Vitae [CV]</h2>
+        <p>My Resume</p>
+     </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me on <a href="https://www.linkedin.com">LinkedIn</a> or send me a message!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kaan Arda Uzun</p>
+    </footer>
+
+    <script>
+        // Function to Toggle Side Menu
+        function toggleMenu() {
+            document.querySelector(".side-menu").classList.toggle("active");
+        }
+
+        // Function to Add Active Class to Clicked Link
+        function activateLink(element) {
+            // Remove active class from all links
+            document.querySelectorAll(".side-menu ul li a").forEach(link => {
+                link.classList.remove("active");
+            });
+            // Add active class to clicked link
+            element.classList.add("active");
+            // Close the menu
+            toggleMenu();
+        }
+    </script>
+</body>
+</html>

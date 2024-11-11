@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Kaan Arda Uzun</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Burger Menu Icon -->
+    <div class="burger-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Side Navigation Menu -->
+    <nav class="side-menu">
+        <div class="close-icon" onclick="toggleMenu()">×</div> 
+        <!-- Close Icon -->
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="#portfolio" onclick="activateLink(this)">Portfolio</a></li>
+                <ul>
+                    <li><a href="#spotifyclone" onclick="activateLink(this)">Spotify Clone</a></li>
+                    <li><a href="#siemlab" onclick="activateLink(this)">SIEM Lab</a></li>
+                </ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>        
+    </nav>
+
+    <header>
+        <h1>Portfolio | Kaan Arda Uzun's Website</h1>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Check out some of my work:</p>
+        <ul>
+            <li>Spotify Clone Project</li>
+            <li>Elastic SIEM Lab Guide</li>
+        </ul>
+        <p>To see the rest of my projects, check out my <a href="https://www.GitHub.com">GitHub</a>.</p>
+    </section>
+
+    <!-- Spotify Clone Section -->
+    <section id="spotifyclone">
+        <h2>Spotift Clone Project</h2>
+        <p>Summary - iOS Clone Spotify App</p>
+        <ul>
+            <li>Browse and search for songs, albums, and artists</li>
+            <li>Play and control music playback</li>
+            <li>Create and manage playlists</li>
+            <li>View song details and album information</li>
+            <li>Having a quiz to learn your mood.</li>
+            <li>Getting songs according to your quiz result.</li>
+        </ul>
+        <p>Screenshots</p>
+        <p float="left">
+            <img src="images/home.jpeg" width="200" />
+            <img src="images/search.jpeg" width="200" />
+            <img src="images/searchv2.jpeg" width="200" />
+            <img src="images/library.jpeg" width="200" />
+            <img src="images/quiz.jpeg" width="200" />
+            <img src="images/quiz_result.jpeg" width="200" />
+        </p>
+        <p>Technologies Used</p>
+        <ul>
+            <li>Xcode</li>
+            <li>Swift</li>
+            <li>Firebase</li>
+            <li>URLSession</li>
+            <li>Cocoapods</li>
+        </ul>
+            <h2>Installation Steps</h2>
+            <p>Follow these steps to get started:</p>
+            <ol>
+                <li>Clone the repository:
+                    <pre><code>git clone https://github.com/UzunKaanA/iOS-CloneSpotifyApp.git</code></pre>
+                </li>
+                <li>Navigate to the project directory:
+                    <pre><code>cd iOS-CloneSpotifyApp</code></pre>
+                </li>
+                <li>Install dependencies using CocoaPods:
+                    <pre><code>pod install</code></pre>
+                </li>
+                <li>Open the project in Xcode:
+                    <pre><code>open Comp.xcworkspace</code></pre>
+                </li>
+            </ol>
+    </section>
+
+    <!-- SIEM Lab Section -->
+    <section id="siemlab">
+        <h2>Elastic SIEM Lab Guide</h2>
+        <p>Summary of the work</p>
+        <ul>
+            <li>In the cybersecurity world, SIEM (Security Information and Event Management) 
+                systems are critical tools that help organizations become better prepared against 
+                security threats. SIEM collects, analyzes, and contextualizes security events. 
+                In this guide, I will share the steps to create your own SIEM lab environment. 
+                This setup will be a great starting point for those who want to learn the basics of 
+                collecting and analyzing security events.
+            </li>
+        </ul>
+
+        <!-- Image below the text -->
+        <img src="images/siem-lab-guide.png" alt="Elastic SIEM Lab Guide" width="500">
+
+        <p>To see the rest and how to do it, check out my 
+            <a href="https://medium.com/@27uzunkaan/elastic-siem-lab-olu%C5%9Fturma-rehberi-e0cb2c7c9a9d">
+                Medium Page
+            </a>. 
+            Or go to my 
+            <a href="blog.html" onclick="activateLink(this)">Blog</a> 
+            page in this website. 
+        </p>
+        </section>
+        
+    <footer>
+        <p>&copy; 2024 Kaan Arda Uzun</p>
+    </footer>
+
+    <script>
+        // Function to Toggle Side Menu
+        function toggleMenu() {
+            document.querySelector(".side-menu").classList.toggle("active");
+        }
+
+        // Function to Add Active Class to Clicked Link
+        function activateLink(element) {
+            // Remove active class from all links
+            document.querySelectorAll(".side-menu ul li a").forEach(link => {
+                link.classList.remove("active");
+            });
+            // Add active class to clicked link
+            element.classList.add("active");
+            // Close the menu
+            toggleMenu();
+        }
+    </script>
+</body>
+</html>
+
