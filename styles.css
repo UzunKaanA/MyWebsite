@@ -139,3 +139,27 @@ footer {
     margin-bottom: 10px;
 }
 
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+section h2 {
+    color: #ffffff;
+}
+
+article {
+    margin-top: 20px;
+}
+
+article h3 {
+    color: #ffffff;
+}
+
+ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+

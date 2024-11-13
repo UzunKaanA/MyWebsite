@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes | Kaan Arda Uzun</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+        <!-- Burger Menu Icon -->
+        <div class="burger-icon" onclick="toggleMenu()">☰</div>
+
+        <!-- Side Navigation Menu -->
+        <nav class="side-menu">
+            <div class="close-icon" onclick="toggleMenu()">×</div> <!-- Close Icon -->
+            <ul>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <ul>
+                    <li><a href="#computer-network" onclick="activateLink(this)">Computer Network</a></li>
+                    <li><a href="#software-testing" onclick="activateLink(this)">Software Testing</a></li>
+                    <li><a href="#security-plus" onclick="activateLink(this)">Software Testing</a></li>
+                </ul>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>        
+        </nav>
+
+    <header>
+        <h1>Notes</h1>
+        <p>Explore my study notes on various topics.</p>
+    </header>
+
+    <!-- Computer Network Section -->
+    <section id="computer-network">
+        <h2>Computer Network</h2>
+        <p>In this section, you'll find my notes on topics related to computer networking, including protocols, network architecture, and more.</p>
+    
+        <article>
+        <h3>Computer Networks vs. Distributed Systems</h3>
+        <ul>
+            <li><strong>Computer Network:</strong> A system for connecting computers and devices to facilitate communication and resource sharing.</li>
+            <li><strong>Distributed System:</strong> Built on top of networks, offering users transparent access without requiring knowledge of geographical locations.</li>
+        </ul>
+
+        <h3>Types of Networks</h3>
+        <ul>
+            <li><strong>WAN</strong> (Wide Area Network): Large geographical range, includes public and packet-switching networks.</li>
+            <li><strong>MAN</strong> (Metropolitan Area Network): City-scale, though less commonly used today.</li>
+            <li><strong>LAN</strong> (Local Area Network): High-speed, low-error rate, usually within a building or campus.</li>
+            <li><strong>PAN</strong> (Personal Area Network) and <strong>BAN</strong> (Body Area Network): Small range networks for personal use or health monitoring.</li>
+        </ul>
+
+        <h3>Network Components and Subnets</h3>
+        <ul>
+            <li><strong>Host:</strong> Devices like computers and servers.</li>
+            <li><strong>Communications Subnet:</strong> Includes active components (routers, switches) and passive components (transmission media).</li>
+        </ul>
+
+        <h3>Subnet Design Approaches</h3>
+        <ul>
+            <li><strong>Point-to-Point:</strong> Direct connections between subnet nodes; uses circuit, message, and packet-switching methods.</li>
+            <li><strong>Broadcast:</strong> Shared communication channel among nodes, requiring mechanisms to manage data collisions.</li>
+        </ul>
+
+        <h3>Network Architecture and Layered Models</h3>
+            <ul>
+                <li><strong>OSI Model:</strong> 7-layer architecture standardizing data communication, from physical data transmission to application protocols.
+            <ul>
+                <li>Layers range from Physical (1) to Application (7), each with specific roles.</li>
+            </ul>
+                </li>
+                <li><strong>TCP/IP Model:</strong> Practical 4-layer architecture (Application, Transport, Internet, Network Access).</li>
+                <li><strong>ATM Model:</strong> Asynchronous Transfer Mode, a unique 3D architecture for high-speed networking.</li>
+            </ul>
+
+        <h3>Physical Layer Essentials</h3>
+            <ul>
+                <li><strong>Signal Transmission:</strong> Fundamental bits representation, encoding, and channel characteristics like capacity, delay, and error rate.</li>
+                <li><strong>Channel Capacity:</strong> Defined by bandwidth and measured in bits per second (bps); affected by frequency and signal strength.</li>
+            </ul>
+        </article>
+
+        <h2><a href="ComputerNetwork.html" target="_blank">Open Detailed Notes on Computer Networks</a></h2>
+    </section>
+  
+
+    <!-- Software Testing Section -->
+    <section id="software-testing">
+        <h2>Software Testing</h2>
+        <p>In this section, you’ll find my notes and resources on various topics related to software testing.</p>
+        <p>It is basically a guide for beginners to have an idea of Software Testing</p>
+        <article>
+            <h3>Notice, This note is in TURKISH.</h3>
+        
+            <ul>
+                <li><strong>Software Testing Expertise:</strong> The knowledge and skills necessary to manage the software testing process and enhance software quality.</li>
+                <li><strong>Fundamentals of Software Testing:</strong> The basic concepts of the testing process and why they are important.</li>
+                <li><strong>Software Testing Methods:</strong> Introduction to various software testing methods, such as unit testing, integration testing, and system testing.</li>
+                <li><strong>Advanced Software Testing Techniques:</strong> More complex testing techniques and advanced strategies.</li>
+                <li><strong>API:</strong> Testing processes conducted through Application Programming Interfaces (APIs) and their role in software testing.</li>
+                <li><strong>SQL and Databases:</strong> Preparing and validating test data using database queries and SQL.</li>
+                <li><strong>MindMap and Test Scenario:</strong> Visualizing and organizing test scenarios using MindMap.</li>
+           </ul>
+        </article>
+        <h2><a href="SoftwareTestingNotes.html" target="_blank">Open Detailed Notes on Software Testing</a></h2>
+    </section>
+
+    <!-- CompTIA Security+ Section -->
+    <section id="security-plus">
+        <h2>CompTIA Security+</h2>
+        <article>
+            <h3>COMING SOON</h3>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kaan Arda Uzun</p>
+    </footer>
+</body>
+</html>
+
+
+<script>
+    // Function to Toggle Side Menu
+    function toggleMenu() {
+        document.querySelector(".side-menu").classList.toggle("active");
+    }
+
+    // Function to Add Active Class to Clicked Link
+    function activateLink(element) {
+        // Remove active class from all links
+        document.querySelectorAll(".side-menu ul li a").forEach(link => {
+            link.classList.remove("active");
+        });
+        // Add active class to clicked link
+        element.classList.add("active");
+        // Close the menu
+        toggleMenu();
+    }
+</script>

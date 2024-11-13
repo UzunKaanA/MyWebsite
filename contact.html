@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Kaan Arda Uzun</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Contact</h1>
+        <p>Reach Out to Me, Let's Connect.</p>
+    </header>
+
+    <!-- Burger Menu Icon -->
+    <div class="burger-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Side Navigation Menu -->
+    <nav class="side-menu">
+        <div class="close-icon" onclick="toggleMenu()">×</div> <!-- Close Icon -->
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>        
+    </nav>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you have any questions, feel free to reach out to me. I'd love to hear from you!</p>
+
+        <!-- Contact Form -->
+        <form action="submit_form.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required placeholder="Write your message here"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <h3>Other Ways to Reach Me</h3>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:uzunkaana@gmail.com">uzunkaana@gmail.com</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/uzunkaana/" target="_blank">linkedin.com/in/uzunkaana</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/UzunKaanA" target="_blank">github.com/UzunKaanA</a></li>
+            <li><strong>Medium:</strong> <a href="https://medium.com/@27uzunkaan" target="_blank">medium.com/@27uzunkaanA</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kaan Arda Uzun</p>
+    </footer>
+</body>
+</html>
+
+<script>
+    // Function to Toggle Side Menu
+    function toggleMenu() {
+        document.querySelector(".side-menu").classList.toggle("active");
+    }
+
+    // Function to Add Active Class to Clicked Link
+    function activateLink(element) {
+        // Remove active class from all links
+        document.querySelectorAll(".side-menu ul li a").forEach(link => {
+            link.classList.remove("active");
+        });
+        // Add active class to clicked link
+        element.classList.add("active");
+        // Close the menu
+        toggleMenu();
+    }
+</script>
