@@ -163,3 +163,59 @@ ul {
     list-style-type: disc;
 }
 
+#about-me {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#siemlab {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#spotifyclone {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#portfolio {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#computer-network {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#security-plus {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#software-testing {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#blog {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+#what-to-find {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
