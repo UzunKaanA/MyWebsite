@@ -20,7 +20,7 @@ header {
     text-align: center;
     background-color: #ECE8ED;
     width: 100%;
-    z-index: 101; /* Header stays on top */
+    z-index: 1; /* Header stays on top */
 }
 
 /* Side Menu Icon Styling */
